@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LitEra | AI-driven QA &amp; Development</title>
+<meta name="description" content="Litera Team is an AI-driven QA and development team: quality assurance, test automation and software development with AI built into every step.">
+<meta property="og:title" content="LitEra | AI-driven QA &amp; Development">
+<meta property="og:description" content="Tested by people. Powered by AI. QA, test automation and software development for teams in the UAE, Europe and worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="litera-logo-circle.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="litera-logo-circle.png">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: light white-to-sky hero with the robot logo, calm white sections, deep-blue contact band. Brand colors from the LitEra logo: blue, charcoal, coral. Single light identity by design. */
+:root {
+  --white: #FFFFFF;
+  --tint: #F6F3FD;
+  --blue: #5B2BD6;
+  --blue-deep: #2E1270;
+  --blue-soft: #EDE6FC;
+  --coral: #F06A6A;
+  --logo-blue: #5B2BD6;
+  --logo-ink: #1D1638;
+  --ink: #1D1638;
+  --muted: #5E5878;
+  --line: #E6E0F3;
+  --f: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--white); color: var(--ink); font-family: var(--f); font-size: 16px; line-height: 1.65; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--white); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { margin: 0; text-wrap: balance; letter-spacing: -0.02em; line-height: 1.15; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
+
+/* Logo */
+.lm-body { fill: none; stroke: var(--logo-blue); stroke-width: 4; }
+.lm-blue { fill: var(--logo-blue); }
+.lm-wire { stroke: var(--logo-blue); stroke-width: 3; }
+.lm-dot { fill: var(--coral); }
+.lm-eye { fill: var(--logo-ink); }
+.lm-glint { fill: var(--white); }
+
+/* Header */
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--white); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.logo svg { width: 46px; height: 38px; }
+.word { font-weight: 800; font-size: 24px; letter-spacing: -0.02em; color: var(--logo-ink); }
+.word b { color: var(--logo-blue); font-weight: 800; }
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; font-size: 15px; font-weight: 500; }
+.nav ul a { color: var(--muted); text-decoration: none; }
+.nav ul a:hover { color: var(--blue); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; cursor: pointer; font-family: var(--f); }
+.btn-primary { background: var(--blue); color: var(--white); }
+.btn-primary:hover { background: var(--blue-deep); }
+.btn-outline { border-color: var(--blue); color: var(--blue); background: var(--white); }
+.btn-outline:hover { background: var(--blue-soft); }
+.btn-light { background: var(--white); color: var(--blue-deep); }
+.btn-light:hover { background: var(--blue-soft); }
+.btn-ghost { border-color: rgba(255,255,255,.5); color: var(--white); background: transparent; }
+.btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+/* Hero */
+.hero { background: linear-gradient(160deg, #FFFFFF 0%, #F1EBFD 55%, #E4D9FB 100%); border-bottom: 1px solid var(--line); }
+.hero .wrap { padding-block: 80px 88px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.hero .wrap > * { min-width: 0; }
+.hero h1 { font-size: clamp(34px, 5vw, 56px); font-weight: 800; }
+.hero h1 span { color: var(--blue); }
+.hero p { font-size: 19px; color: var(--muted); max-width: 34em; margin: 22px 0 34px; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.chip { font-size: 14px; font-weight: 500; padding: 6px 14px; border-radius: 99px; background: var(--white); border: 1px solid var(--line); color: var(--ink); }
+.chip::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); margin-right: 8px; vertical-align: middle; }
+.hero-logo { justify-self: center; width: 100%; max-width: 300px; aspect-ratio: 1; border-radius: 50%; background: var(--white); box-shadow: 0 30px 60px -30px rgba(46,18,112,.35); display: grid; place-items: center; }
+.hero-logo svg { width: 70%; height: auto; }
+
+/* Sections */
+section { padding-block: 84px; }
+section.tint { background: var(--tint); }
+.label { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+.sec-head { max-width: 40em; margin-bottom: 44px; display: grid; gap: 12px; }
+.sec-head h2 { font-size: clamp(28px, 3.4vw, 38px); font-weight: 800; }
+.sec-head p { margin: 0; color: var(--muted); font-size: 17px; }
+
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 30px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.icon { width: 48px; height: 48px; border-radius: 12px; background: var(--blue-soft); display: grid; place-items: center; }
+.icon svg { width: 24px; height: 24px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.card h3 { font-size: 20px; font-weight: 700; }
+.card p { margin: 0; color: var(--muted); }
+
+/* Approach */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.step { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.num { width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: var(--white); display: grid; place-items: center; font-weight: 700; }
+.step h3 { font-size: 18px; font-weight: 700; }
+.step p { margin: 0; color: var(--muted); font-size: 15px; }
+.why { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border-top: 1px solid var(--line); padding-top: 40px; }
+.why div { min-width: 0; }
+.why strong { display: block; font-size: 17px; margin-bottom: 4px; }
+.why span { color: var(--muted); font-size: 15px; }
+
+/* Engagement */
+.models { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.model { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 30px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.model h3 { font-size: 20px; }
+.model p { margin: 0; color: var(--muted); }
+.quote { margin-top: 32px; background: var(--blue-soft); border-radius: 16px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.quote p { margin: 0; font-size: 17px; max-width: 38em; }
+.quote strong { color: var(--blue-deep); }
+
+/* Contact */
+.contact { background: linear-gradient(160deg, var(--blue-deep) 0%, var(--blue) 100%); color: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+.contact-grid > * { min-width: 0; }
+.contact .label { color: #CDBDFA; }
+.contact h2 { font-size: clamp(30px, 3.8vw, 42px); font-weight: 800; margin-top: 10px; }
+.contact p { color: rgba(255,255,255,.88); font-size: 17px; margin: 16px 0 28px; }
+.contact .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.info { background: var(--white); color: var(--ink); border-radius: 16px; padding: 8px 28px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: 0; }
+.row .k { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.row .v { font-size: 17px; font-weight: 600; word-break: break-word; font-variant-numeric: tabular-nums; }
+.row a.v { color: var(--blue); text-decoration: none; }
+.row a.v:hover { text-decoration: underline; }
+.phone-row { align-items: center; }
+.phone-main { display: grid; gap: 6px; justify-items: start; min-width: 0; }
+.qrs { display: flex; gap: 14px; flex-wrap: wrap; }
+.qr { margin: 0; display: grid; gap: 6px; justify-items: center; }
+.qr svg { width: 112px; height: 112px; border: 1px solid var(--line); border-radius: 10px; padding: 4px; background: #FFFFFF; }
+.qr figcaption { font-size: 12px; font-weight: 600; color: var(--muted); text-align: center; max-width: 120px; line-height: 1.3; }
+.copy { font-family: var(--f); font-size: 13px; font-weight: 600; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--tint); color: var(--blue-deep); cursor: pointer; }
+.btn.copy { font-size: 15px; padding: 12px 22px; border: 1px solid transparent; background: var(--white); }
+
+footer { padding-block: 28px; color: var(--muted); font-size: 14px; background: var(--white); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+footer a { color: var(--blue); text-decoration: none; }
+
+@media (max-width: 880px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-block: 48px 60px; }
+  .hero-logo { max-width: 200px; order: -1; justify-self: start; }
+  .grid3, .models, .why, .contact-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .nav ul { display: none; }
+  section { padding-block: 60px; }
+}
+@media (max-width: 480px) { .steps { grid-template-columns: 1fr; } .nav .btn { display: none; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="litera-mark" viewBox="0 0 120 100">
+    <line class="lm-wire" x1="60" y1="8" x2="60" y2="19"/>
+    <circle class="lm-dot" cx="60" cy="7" r="5"/>
+    <rect class="lm-blue" x="47" y="17" width="26" height="8"/>
+    <line class="lm-wire" x1="10" y1="57" x2="26" y2="57"/>
+    <circle class="lm-dot" cx="8" cy="57" r="5"/>
+    <rect class="lm-blue" x="24" y="45" width="8" height="24"/>
+    <line class="lm-wire" x1="94" y1="57" x2="110" y2="57"/>
+    <circle class="lm-dot" cx="112" cy="57" r="5"/>
+    <rect class="lm-blue" x="88" y="45" width="8" height="24"/>
+    <rect class="lm-body" x="32" y="27" width="56" height="60" rx="4"/>
+    <circle class="lm-eye" cx="60" cy="57" r="15"/>
+    <circle class="lm-glint" cx="53" cy="50" r="5.5"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="LitEra home">
+      <svg aria-hidden="true"><use href="#litera-mark"/></svg>
+      <span class="word"><b>Lit</b>Era</span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#approach">Our approach</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#contact">Contact us</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1><span>AI-driven</span> QA and development for reliable software</h1>
+        <p>Litera Team is a team of QA engineers and developers who build artificial intelligence into every stage of delivery. You get faster releases, fewer defects and full visibility on quality.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#contact">Request a consultation</a>
+          <a class="btn btn-outline" href="#services">Our services</a>
+        </div>
+        <div class="chips">
+          <span class="chip">Manual testing</span>
+          <span class="chip">Test automation</span>
+          <span class="chip">API testing</span>
+          <span class="chip">Software development</span>
+        </div>
+      </div>
+      <div class="hero-logo"><svg role="img" aria-label="LitEra logo"><use href="#litera-mark"/></svg></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Services</span>
+        <h2>What we do</h2>
+        <p>Work with us on quality assurance, development, or both as one team.</p>
+      </div>
+      <div class="grid3">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div>
+          <h3>Quality Assurance</h3>
+          <p>Requirements analysis, test design and manual testing that catch issues before your users do. Clear, reproducible defect reports for your developers.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></div>
+          <h3>Test Automation</h3>
+          <p>Automated UI and API test suites that run with every release and plug into your existing CI/CD pipeline.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></div>
+          <h3>Software Development</h3>
+          <p>Web and desktop applications and AI integrations, delivered by developers who hand over features already tested.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="tint">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Our approach</span>
+        <h2>A workflow fully integrated with AI</h2>
+        <p>AI speeds up every step. Our engineers review every result before it reaches you.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Analyse</h3><p>AI reviews your requirements and highlights gaps and risks early.</p></div>
+        <div class="step"><div class="num">2</div><h3>Plan &amp; design</h3><p>Test cases and tasks are prepared quickly and checked by our specialists.</p></div>
+        <div class="step"><div class="num">3</div><h3>Build &amp; test</h3><p>Development and testing run in parallel, with automation from day one.</p></div>
+        <div class="step"><div class="num">4</div><h3>Report</h3><p>You receive clear reports on quality and progress after every release.</p></div>
+      </div>
+      <div class="why">
+        <div><strong>Faster delivery</strong><span>AI handles routine work so the team focuses on what matters.</span></div>
+        <div><strong>Human-verified quality</strong><span>Every AI output is reviewed by an experienced engineer.</span></div>
+        <div><strong>Flexible collaboration</strong><span>We adapt to your tools, processes and time zone.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Pricing</span>
+        <h2>Pricing tailored to your project</h2>
+        <p>Every project is different, so we agree on scope and cost together after a short discussion.</p>
+      </div>
+      <div class="models">
+        <article class="model">
+          <h3>One-time project</h3>
+          <p>An audit, a test automation setup or a defined piece of development with a fixed scope.</p>
+        </article>
+        <article class="model">
+          <h3>Dedicated team</h3>
+          <p>QA engineers and/or developers working with you on an ongoing monthly basis.</p>
+        </article>
+        <article class="model">
+          <h3>On demand</h3>
+          <p>Extra capacity when you need it, for releases, peaks or specific tasks.</p>
+        </article>
+      </div>
+      <div class="quote">
+        <p><strong>Price on request.</strong> Tell us about your project and we will prepare a proposal that fits your goals and budget.</p>
+        <a class="btn btn-primary" href="#contact">Get a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="label">Contact</span>
+        <h2>Let's discuss your project</h2>
+        <p>Message us on WhatsApp about what you are building. We will get back to you to arrange a call.</p>
+        <div class="ctas">
+          <a class="btn btn-light" href="https://wa.me/971503100241" target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/litera-team-srl-987a9a254/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="info">
+        <div class="row phone-row">
+          <div class="phone-main">
+            <div class="k">Phone · WhatsApp</div>
+            <a class="v" id="phone" href="tel:+971503100241">+971 50 310 0241</a>
+            <button class="copy" type="button" data-copy="phone">Copy number</button>
+          </div>
+          <div class="qrs"><figure class="qr">
+            <svg viewBox="-2 -2 29 29" role="img" aria-label="QR code: chat with us on WhatsApp" shape-rendering="crispEdges"><rect x="-2" y="-2" width="29" height="29" fill="#FFFFFF"/><path fill="#2E1270" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM11 0h1v1h-1zM13 0h1v1h-1zM16 0h1v1h-1zM18 0h1v1h-1zM19 0h1v1h-1zM20 0h1v1h-1zM21 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM14 1h1v1h-1zM16 1h1v1h-1zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM14 2h1v1h-1zM15 2h1v1h-1zM18 2h1v1h-1zM20 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM13 3h1v1h-1zM14 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM10 4h1v1h-1zM11 4h1v1h-1zM14 4h1v1h-1zM18 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM16 5h1v1h-1zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM19 6h1v1h-1zM20 6h1v1h-1zM21 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM11 7h1v1h-1zM12 7h1v1h-1zM15 7h1v1h-1zM16 7h1v1h-1zM0 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM13 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM17 8h1v1h-1zM18 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM23 8h1v1h-1zM0 9h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM5 9h1v1h-1zM8 9h1v1h-1zM11 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM23 9h1v1h-1zM2 10h1v1h-1zM3 10h1v1h-1zM6 10h1v1h-1zM8 10h1v1h-1zM13 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM24 10h1v1h-1zM2 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM14 11h1v1h-1zM17 11h1v1h-1zM18 11h1v1h-1zM19 11h1v1h-1zM21 11h1v1h-1zM24 11h1v1h-1zM0 12h1v1h-1zM1 12h1v1h-1zM2 12h1v1h-1zM4 12h1v1h-1zM6 12h1v1h-1zM8 12h1v1h-1zM9 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM14 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM24 12h1v1h-1zM0 13h1v1h-1zM3 13h1v1h-1zM5 13h1v1h-1zM8 13h1v1h-1zM12 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM19 13h1v1h-1zM23 13h1v1h-1zM0 14h1v1h-1zM2 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM17 14h1v1h-1zM19 14h1v1h-1zM20 14h1v1h-1zM21 14h1v1h-1zM23 14h1v1h-1zM24 14h1v1h-1zM0 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM7 15h1v1h-1zM12 15h1v1h-1zM15 15h1v1h-1zM19 15h1v1h-1zM21 15h1v1h-1zM22 15h1v1h-1zM24 15h1v1h-1zM0 16h1v1h-1zM3 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM9 16h1v1h-1zM10 16h1v1h-1zM13 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM22 16h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM11 17h1v1h-1zM12 17h1v1h-1zM14 17h1v1h-1zM16 17h1v1h-1zM20 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM9 18h1v1h-1zM11 18h1v1h-1zM12 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM16 18h1v1h-1zM18 18h1v1h-1zM20 18h1v1h-1zM24 18h1v1h-1zM0 19h1v1h-1zM6 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM16 19h1v1h-1zM20 19h1v1h-1zM0 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM4 20h1v1h-1zM6 20h1v1h-1zM9 20h1v1h-1zM13 20h1v1h-1zM15 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM22 20h1v1h-1zM0 21h1v1h-1zM2 21h1v1h-1zM3 21h1v1h-1zM4 21h1v1h-1zM6 21h1v1h-1zM11 21h1v1h-1zM12 21h1v1h-1zM15 21h1v1h-1zM16 21h1v1h-1zM17 21h1v1h-1zM18 21h1v1h-1zM23 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM12 22h1v1h-1zM21 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM11 23h1v1h-1zM12 23h1v1h-1zM16 23h1v1h-1zM17 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM0 24h1v1h-1zM1 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM11 24h1v1h-1zM14 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM21 24h1v1h-1zM24 24h1v1h-1z"/></svg>
+            <figcaption>Scan to chat on WhatsApp</figcaption>
+          </figure></div>
+        </div>
+        <div class="row">
+          <div><div class="k">Email</div><a class="v" id="email" href="mailto:hr@literateam.com">hr@literateam.com</a></div>
+          <button class="copy" type="button" data-copy="email">Copy</button>
+        </div>
+        <div class="row">
+          <div><div class="k">LinkedIn</div><a class="v" href="https://www.linkedin.com/in/litera-team-srl-987a9a254/" target="_blank" rel="noopener">Litera Team SRL</a></div>
+        </div>
+        <div class="row">
+          <div><div class="k">Locations</div><div class="v">United Arab Emirates · Europe</div></div>
+        </div>
+        <div class="row">
+          <div><div class="k">Availability</div><div class="v">Working remotely with clients worldwide</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Litera Team SRL</span>
+    <a href="https://www.linkedin.com/in/litera-team-srl-987a9a254/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.dataset.copy);
+    var text = el.textContent.trim();
+    var label = btn.textContent;
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1600); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      done('Selected');
+    }
+    try { navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback); }
+    catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>
